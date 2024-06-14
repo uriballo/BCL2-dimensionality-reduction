@@ -40,8 +40,20 @@ S = [0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;     % DIS
      0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 0;     % BAK2
      0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0;     % BAK4
      0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 1;     % Mito
-     0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0];    % MOMP     
- 
+     0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0];    % MOMP 
+
+S = load("matlab.mat").adj_mat;
+
+
+% Extract the upper triangular part
+U = triu(S);
+
+% Zero out the diagonal
+U(logical(eye(size(U)))) = 0;
+
+% Create the symmetric matrix
+S = U + U';
+
 issymmetric(S)                  % Check adjacency matrix is symmetric
 
 node_names = {'DIS', 'Bid', 'Bim', 'Puma', 'Noxa', 'tBid', 'aBim', 'aPuma',...
