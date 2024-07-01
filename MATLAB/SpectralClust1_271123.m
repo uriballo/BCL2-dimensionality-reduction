@@ -71,8 +71,8 @@ set(gcf,'position',[10,10,1400,800])
  
 %% Clustering algorithm
 
-k = 3;                  % Number of clusters
-rng('default')          % For reproducibility
+k = 3;                  
+rng('default')          
 idx = spectralcluster(S,k,'Distance','precomputed','LaplacianNormalization','symmetric');
 
 %% Extract matrices of each cluster

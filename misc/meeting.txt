@@ -1,0 +1,25 @@
+A PARAM:
+k1_93,0.0611505,,,
+k1_95,427.0945418,,
+k1_97,7.05E+03,,,
+k1_99,6.44E+04,,,
+k1_101,35581.818,,,
+k1_133,8856.4059,,,
+k1_135,7.95E+04,,,
+k1_150,17.35,,,
+
+
+-> wait for old paper parameter
+
+BCL2 := 246.045 (bcl2 bclxl mcl1 A1)
+
+BAX := 1201.64059 (BAX  BAK)
+
+BID := 477.095 (BIM, PUMA, NOXA)
+
+DIS := 21.17
+
+B PARAM:
+substrate without product
+
+also weighted average
